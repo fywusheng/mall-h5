@@ -602,11 +602,10 @@ export default {
           break;
         case 9:
           // 商城
-          wx.miniProgram.reLaunch({ url: "/sub-pages/point/index/index" });
-          window.my &&
-            window.my.reLaunch({ url: "/sub-pages/point/index/index" });
-          window.qa &&
-            window.qa.reLaunch({ url: "/sub-pages/point/index/index" });
+          wx.miniProgram.navigateBack();
+          window.my && window.my.navigateBack();
+          // window.qa &&
+          //   window.qa.reLaunch({ url: "/sub-pages/point/index/index" });
           break;
         default:
           wx.miniProgram.reLaunch({ url: "/pages/index/index?index=3" });
