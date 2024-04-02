@@ -8,25 +8,6 @@
       <span>{{ allDes }} </span><span>后订单将自动消失，请及时支付</span>
     </div>
     <div class="main-box">
-      <div class="alipay">
-        <div class="alipay-l">
-          <img class="icon-pay" src="@/assets/imgs/pay/wallet.png" alt="" />
-          <span>惠老钱包</span>
-        </div>
-        <van-radio-group v-model="payment">
-          <van-radio name="1" :disabled="!isBindCard">
-            <template #icon="props">
-              <span v-if="loading == 2" class="bind-card" @click="goBindCard"
-                >去绑卡</span
-              >
-              <img
-                class="img-icon"
-                :src="props.checked ? activeIcon : inactiveIcon"
-              />
-            </template>
-          </van-radio>
-        </van-radio-group>
-      </div>
       <div
         class="wechat"
         v-if="phoneType != 'alipay' && phoneType != 'quickapp'"
