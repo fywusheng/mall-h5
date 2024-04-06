@@ -31,7 +31,7 @@
     "vue-amap": "^0.5.10",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2",
-    "weixin-js-sdk": "^1.6.0"
+    "weixin-js-sdk": "^1.6.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
