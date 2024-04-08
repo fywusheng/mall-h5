@@ -358,11 +358,11 @@ export default {
       }
       if (this.phoneType === "alipay" || this.phoneType === "weixin") {
         wx.miniProgram.reLaunch({
-          url: "/pages/life/orderInfo?orderId=" + this.formData.orderId,
+          url: `/sub-pages/me/order-detail/main?orderId=${this.formData.orderId}`,
         });
         window.my &&
           window.my.reLaunch({
-            url: "/pages/life/orderInfo?orderId=" + this.formData.orderId,
+            url: `/sub-pages/me/order-detail/main?orderId=${this.formData.orderId}`,
           });
       }
     },
