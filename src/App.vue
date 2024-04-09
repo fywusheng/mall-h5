@@ -18,12 +18,13 @@ export default {
   name: "app",
   data() {
     return {
-      loadingStatus: true //加载展示
-    }
+      loadingStatus: true, //加载展示
+    };
   },
-  mounted() { },
+  mounted() {},
   created() {
-    const accessToken = this.$route.query.token || localStorage.getItem("token")
+    const accessToken =
+      this.$route.query.token || localStorage.getItem("token");
     // if (!accessToken) {
     //   return this.$dialog
     //     .alert({
@@ -33,12 +34,12 @@ export default {
     //       this.$router.go(-1)
     //     })
     // }
-    localStorage.setItem("token", accessToken)
-    this.$store.dispatch("getCity")
-    this.$store.dispatch("getHomeCity")
+    localStorage.setItem("token", accessToken);
+    // this.$store.dispatch("getCity")
+    // this.$store.dispatch("getHomeCity")
   },
-  methods: {}
-}
+  methods: {},
+};
 </script>
 
 <style lang="less">
