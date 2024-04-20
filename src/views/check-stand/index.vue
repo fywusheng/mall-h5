@@ -31,7 +31,7 @@
           </van-radio>
         </van-radio-group>
       </div>
-      <div
+      <!-- <div
         class="alipay"
         v-if="phoneType != 'weixin' && phoneType != 'quickapp'"
       >
@@ -53,7 +53,7 @@
             </template>
           </van-radio>
         </van-radio-group>
-      </div>
+      </div> -->
     </div>
     <div class="line"></div>
     <button
@@ -99,7 +99,7 @@ export default {
   data() {
     return {
       // 支付方式
-      payment: "0",
+      payment: "3",
       mpType: "",
       // 倒计时
       time: "",
@@ -210,11 +210,6 @@ export default {
     },
     // 获取收银台信息
     async getPageInfo() {
-      //之前收银台接口
-      // const { data } = await payApi.showCheckStand({
-      //   cashId: this.cashId
-      // })
-      //现在收银台接口
       try {
         const { data } = await payApi.showCheckStandOrder({
           cashId: this.cashId,
@@ -230,7 +225,7 @@ export default {
         this.formData.payment = this.payment;
         this.secenType = data.orderSource;
         localStorage.setItem("token", data.uactId);
-        this.getCardStatus();
+        // this.getCardStatus();
         this.timeRun(data.expirationTime, data.nowTime);
         // this.startTime()
       } catch (err) {
